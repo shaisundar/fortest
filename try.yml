@@ -1,0 +1,19 @@
+# https://dev.azure.com/emergencyexitdev
+name: YAML pipeline
+schedules:
+- cron: "0 1-6 * * Mon-Fri"
+  displayName: 'everyday'
+  branches:
+    include:
+      - master
+  always: 'true'
+
+jobs:
+  - job: one
+    pool:
+      vmImage: vs2017-win2016
+    steps:
+      - powershell: |
+          #Write your PowerShell commands here.
+          Write-Host "Hello World 123"
+        displayName: 'PowerShell Script'
