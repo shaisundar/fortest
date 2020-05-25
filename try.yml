@@ -1,12 +1,12 @@
 # https://dev.azure.com/emergencyexitdev
 name: YAML pipeline
-schedules:
-- cron: '0 1-6 * * Mon-Fri'
-  displayName: 'everyday'
-  branches:
-    include:
-      - master
-  always: 'true'
+#schedules:
+#- cron: '0 1-6 * * Mon-Fri'
+#  displayName: 'everyday'
+#  branches:
+#    include:
+#      - master
+#  always: 'true'
 
 jobs:
   - job: one
